@@ -1,3 +1,7 @@
+## Notice
+
+Started from the [vim-dotfiles](https://github.com/jperras/vim-dotfiles) of someone more clever than myself. May as well copy the README too.
+
 ## Vim dotfiles
 
 These are the vim runtime files that I use on a daily basis. Feel free to clone, modify, change, add, murder or remove portions of it at will.
@@ -31,8 +35,3 @@ And that's it! Be sure to source your newly installed configuration (`:source $M
 
 The included `.vimrc` contains some very minimal configurations that should be sane defaults for most developers, including a colorscheme that is pulled from one of the installed
 bundles. Feel free to modify at will, of course. See the comments in the `.vimrc` file for more details, and check out the individual bundles that are pulled in on github until
-I decide to annotate & comment on what each of them do.
-
-## Screenshot
-
-And here's a gratuitous screenshot: ![screenshot of vim colorscheme & some configs in action](http://f.cl.ly/items/1L2e0L3M2Y1D371J0o19/Image%202011.08.31%206:27:25%20PM.png "Screenshot")
