@@ -23,6 +23,11 @@ Bundle 'tpope/vim-rails'
 Bundle 'othree/html5.vim'
 Bundle 'mutewinter/nginx.vim'
 
+Bundle 'nvie/vim-flake8'
+Bundle 'fs111/pydoc.vim'
+Bundle 'vim-scripts/python_match.vim'
+Bundle 'jmcantrell/vim-virtualenv'
+
 set encoding=utf-8
 set autoread
 set nocompatible
@@ -46,6 +51,9 @@ set list listchars=tab:»\ ,trail:·
 syntax on
 filetype plugin indent on
 
+" Python specific config
+autocmd FileType python setlocal shiftwidth=4 expandtab tabstop=4 softtabstop=4
+
 " Color theme
 colorscheme lucius 
 
@@ -53,5 +61,11 @@ colorscheme lucius
 LuciusDark 
 
 set statusline=%t[%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%=%c,%l/%L\ %P
+set laststatus=2
 
 map <C-f>         :NERDTreeToggle<CR>
+
+" F11 to toggle paste mode
+map <F11> :set invpaste<CR>
+set pastetoggle=<F11>
+
