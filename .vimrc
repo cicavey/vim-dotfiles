@@ -5,28 +5,33 @@ call vundle#rc()
 
 " let Vundle manage Vundle
 " required! 
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
 " Colors!
-Bundle 'jonathanfilip/vim-lucius'
+Plugin 'jonathanfilip/vim-lucius'
+Plugin 'tomasr/molokai'
 
-Bundle 'scrooloose/nerdtree'
-Bundle 'leshill/vim-json'
-Bundle 'tpope/vim-haml'
-Bundle 'kchmck/vim-coffee-script'
+Plugin 'scrooloose/nerdtree'
+Plugin 'leshill/vim-json'
+Plugin 'tpope/vim-haml'
+Plugin 'kchmck/vim-coffee-script'
 
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-bundler'
-Bundle 'tpope/vim-markdown'
-Bundle 'tpope/vim-rails'
-Bundle 'othree/html5.vim'
-Bundle 'mutewinter/nginx.vim'
+Plugin 'pangloss/vim-javascript'
 
-Bundle 'nvie/vim-flake8'
-Bundle 'fs111/pydoc.vim'
-Bundle 'vim-scripts/python_match.vim'
-Bundle 'jmcantrell/vim-virtualenv'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-bundler'
+Plugin 'tpope/vim-markdown'
+Plugin 'tpope/vim-rails'
+Plugin 'othree/html5.vim'
+Plugin 'mutewinter/nginx.vim'
+
+Plugin 'nvie/vim-flake8'
+Plugin 'fs111/pydoc.vim'
+Plugin 'vim-scripts/python_match.vim'
+Plugin 'jmcantrell/vim-virtualenv'
+
+Plugin 'ekalinin/Dockerfile.vim'
 
 set encoding=utf-8
 set autoread
@@ -55,10 +60,9 @@ filetype plugin indent on
 autocmd FileType python setlocal shiftwidth=4 expandtab tabstop=4 softtabstop=4
 
 " Color theme
-colorscheme lucius 
-
-" Color scheme specific options
-LuciusDark 
+colorscheme lucius
+LuciusDark
+"colorscheme molokai
 
 set statusline=%t[%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%=%c,%l/%L\ %P
 set laststatus=2
@@ -69,3 +73,9 @@ map <C-f>         :NERDTreeToggle<CR>
 map <F11> :set invpaste<CR>
 set pastetoggle=<F11>
 
+filetype off
+filetype plugin indent off
+set runtimepath+=$GOROOT/misc/vim
+filetype plugin indent on
+syntax on
+autocmd FileType go autocmd BufWritePre <buffer> Fmt
