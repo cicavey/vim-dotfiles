@@ -1,7 +1,7 @@
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+call vundle#begin()
 
 " let Vundle manage Vundle
 " required! 
@@ -32,6 +32,8 @@ Plugin 'vim-scripts/python_match.vim'
 Plugin 'jmcantrell/vim-virtualenv'
 
 Plugin 'ekalinin/Dockerfile.vim'
+
+call vundle#end()
 
 set encoding=utf-8
 set autoread
